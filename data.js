@@ -1,41 +1,45 @@
-// General Total Expenses
-const allowance = 1500;
+fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+        const allowance = data.general.Constant_Allowance;
+        let budget = data.general.TotalBudget;
+        let savings = data.general.TotalSavings;
+        let totalExpenses = data.general.TotalExpenses;
 
-let budget = allowance - 500;
-let savings = allowance - budget;
+        // fetch data from json file where category is transportation
+        let transportation = data.entries
+            .flatMap(entry => entry.expenses)
+            .filter(expense => expense.category === 'transportation')
+            .map(expense => ({ name: expense.name, amount: expense.amount }));
 
-let food = [];
+        let totalTranspo = transportation.reduce((sum, transpo) => sum + transpo.amount, 0);
+        let rbal = budget - totalTranspo;
 
-let Splurge = [];
-let others = [
-    { name: 'spotifySubscription', value: 75 },
-];
+        // console.log(`Allowance: ${allowance}`);
+        // console.log(`Savings: ${savings}`);
+        // console.log(`Budget: ${budget}`);
+        console.log(`Total Transportation: ${totalTranspo}`);
+        // console.log(`left over money: ${leftover}`);
 
-let schoolTranspo = [
-    {name: 'Jeepney to Inter', value: 11},
-    {name: 'Jeepney to School', value: 16},
-];
+        document.getElementById('strbal').innerHTML = budget;
+        document.getElementById('tlex').innerHTML = totalTranspo;
+        document.getElementById('rbal').innerHTML = rbal;
+    })
+    .catch(error => console.error('Error:', error));
 
 
-// expenses.food.forEach(index => {
-//     console.log(index);
-// });
+    // let currentDate = new Date();
+    // let formattedDate = currentDate.toLocaleDateString();
 
-let totalTranspo = schoolTranspo.reduce((sum, expense) => sum + expense.value, 0);
-let leftover = budget - totalTranspo;
+    // console.log(`Date: ${formattedDate}`);
 
-console.log(`Allowance: ${allowance}`);
-console.log(`Savings: ${savings}`);
-console.log(`Budget: ${budget}`);
-console.log(`Total Transportation: ${totalTranspo}`);
-console.log(`left over money: ${leftover}`);
 
-let currentDate = new Date();
-let formattedDate = currentDate.toLocaleDateString();
 
-console.log(`Date: ${formattedDate}`);  
 
-document.getElementById('strbal').innerHTML = budget;
+
+
+
+
 
 
 
