@@ -7,35 +7,47 @@
     },
     "entries": [
         {
+            "id": "1",
             "year": "2024",
             "month": "January",
             "day": "1",
             "budget": "1000",
+            "TotalDayExpenses":"500",
             "expenses": [
                 {
-                    "category": "consumables",
+                    "category": "food/drink",
                     "name": "milktea",
-                    "amount": "100"
+                    "amount": 100
                 },
                 {
                     "category": "transportation",
-                    "name": "trycycle to san isidro",
-                    "amount": "20"
+                    "name": "Tricycle to San Isidro",
+                    "amount": 20
                 },
                 {
                     "category": "transportation",
                     "name": "Jeep to inter",
-                    "amount": "11"
+                    "amount": 11
                 },
                 {
                     "category": "transportation",
                     "name": "Jeep to bacolor",
-                    "amount": "16"
+                    "amount": 16
                 },
                 {
                     "category": "transportation",
                     "name": "Jeep to inter",
-                    "amount": "16"
+                    "amount": 16
+                },
+                {
+                    "category": "transportation",
+                    "name": "Jeep to San Isidro",
+                    "amount": 11
+                },
+                {
+                    "category": "transportation",
+                    "name": "Tricycle to Home",
+                    "amount": 30
                 }
             ]
         }
