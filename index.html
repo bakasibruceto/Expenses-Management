@@ -42,30 +42,66 @@
                         <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">01/01/2024</td>
                         <td class="whitespace-nowrap px-4 py-2 text-gray-700">Monday</td>
                         <td class="whitespace-nowrap px-4 py-2 text-gray-700">Vacation</td>
-                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">PHP120,000</td>
+                        <td id="exp" class="whitespace-nowrap px-4 py-2 text-gray-700"></td>
                         <td class="whitespace-nowrap px-4 py-2">
-                            <a
-                              href="#"
-                              class="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
-                            >
-                              View
+                            <a href="#"
+                                class="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">
+                                View
                             </a>
-                          </td>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div class="flex flex-col space-y-2 text-lg font-semibold">
-            <div>Year: 2024</div>
-            <div>Month: January</div>
-            <div>Total allowance:</div>
-            <div>Total Savings:</div>
-            <div>Total Expenses:</div>
+        <div>
+            <div class="flex flex-col space-y-2 text-sm font-semibold">
+                <table class>
+                    <tr>
+                        <th class="text-left pr-5">Date:</th>
+                        <td>01/01/2024</td>
+                    </tr>
+                    <tr>
+                        <th class="text-left pr-5">Starting Balance:</th>
+                        <td id="strbal" class="text-center text-green-500"></td>
+                    </tr>
+                    <tr>
+                        <th class="text-left pr-5">Total Expenses:</th>
+                        <td id="tlex" class="text-center text-red-500"></td>
+                    </tr>
+                    <tr>
+                        <th class="text-left pr-5">Remaining Balance:</th>
+                        <td id="rbal" class="text-center font-bold bg-yellow-200"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="divide-y-2 divide-gray-200 bg-white text-sm">
+                    <thead class="ltr:text-left rtl:text-right">
+                        <tr>
+                            <!-- <th class="sticky inset-y-0 start-0 bg-white px-4 py-2">
+                            <label for="SelectAll" class="sr-only">Select All</label>
+
+                            <input type="checkbox" id="SelectAll" class="h-5 w-5 rounded border-gray-300" />
+                        </th> -->
+
+                            <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900"></th>
+
+
+                        </tr>
+                    </thead>
+
+                    <tbody id="tableBody" class="divide-y divide-gray-200">
+
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
 
 
-    <script src="data.js"></script>
+    <script type="module" src="js/script.js"></script>
 </body>
 
 </html>
