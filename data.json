@@ -1,16 +1,26 @@
 {
     "general": {
-        "Constant_Allowance": "1500",
-        "TotalSavings": "500",
-        "TotalBudget": "1000",
-        "TotalExpenses": "1000"
+        "Constant_Allowance": 1500,
+        "Constant_Savings": 500,
+        "TotalSavings": 500,
+        "TotalBudget": 1000,
+        "TotalExpenses": 1000
     },
+
+    "categories": [
+        "food/drink",
+        "transportation",
+        "others",
+        "entertainment"
+
+    ],
     "entries": [
         {
-            "id": "1",
-            "year": "2024",
+            "id": 1,
+            "year": 2024,
             "month": "January",
-            "day": "1",
+            "day": 1,
+            "allowance": 500,
             "budget": "1000",
             "TotalDayExpenses":"500",
             "expenses": [
