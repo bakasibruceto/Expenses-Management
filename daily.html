@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="flex justify-center">
+        <div class="overflow-x-auto">
+            <table class="divide-y-2 divide-gray-200 bg-white text-sm">
+                <thead class="ltr:text-left rtl:text-right">
+                    <tr>
+                        <!-- <th class="sticky inset-y-0 start-0 bg-white px-4 py-2">
+                            <label for="SelectAll" class="sr-only">Select All</label>
+
+                            <input type="checkbox" id="SelectAll" class="h-5 w-5 rounded border-gray-300" />
+                        </th> -->
+        
+                        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900"></th>
+                        
+                        
+                    </tr>
+                </thead>
+
+                <tbody id="tableBody" class="divide-y divide-gray-200">
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="flex flex-col space-y-2 text-lg font-semibold">
+            <table class>
+                <tr>
+                    <th class="text-right pr-5">Date:</th>
+                    <td>01/01/2024</td>
+                </tr>
+                <tr>
+                    <th class="text-right pr-5">Starting Balance:</th>
+                    <td id="strbal" class="text-center text-green-500"></td>
+                </tr>
+                <tr>
+                    <th class="text-right pr-5">Total Expenses:</th>
+                    <td id="tlex"class="text-center text-red-500"></td>
+                </tr>
+                <tr>
+                    <th class="text-right pr-5">Remaining Balance:</th>
+                    <td id="rbal"class="text-center font-bold bg-yellow-200"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
