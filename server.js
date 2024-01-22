@@ -30,10 +30,19 @@ app.post('/updateTotalDayExpenses', (req, res) => {
         let entry = jsonData.entries.find(entry => entry.id == entryId);
 
         if (entry) {
-            // Only update TotalDayExpenses if the new value is different
+            let isUpdated = false;
+
             if (entry.TotalDayExpenses !== NewTotalDayExpenses) {
                 entry.TotalDayExpenses = NewTotalDayExpenses;
+                isUpdated = true;
+            }
 
+            if (entry.previousDayExpenses !== NewTotalDayExpenses) {
+                entry.previousDayExpenses = NewTotalDayExpenses;
+                isUpdated = true;
+            }
+
+            if (isUpdated) {
                 let updatedJson = JSON.stringify(jsonData, null, 2);
 
                 fs.writeFile('data.json', updatedJson, 'utf8', (err) => {
@@ -42,11 +51,12 @@ app.post('/updateTotalDayExpenses', (req, res) => {
                         return res.status(500).send('Error writing to file');
                     }
 
-                    res.send('updated TotalDayExpenses');
+                    res.send('Updated expenses');
                 });
             } else {
-                res.send('TotalDayExpenses not changed');
+                res.send('Expenses not changed');
             }
+
         } else {
             res.status(404).send('Entry not found');
         }
