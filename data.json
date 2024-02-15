@@ -7,7 +7,7 @@
     "TotalExpenses": 1000
   },
   "categories": [
-    "fooddrink",
+    "food/drink",
     "transportation",
     "others",
     "entertainment"
@@ -61,7 +61,7 @@
           "amount": 30
         },
         {
-          "category": "halo",
+          "category": "others",
           "name": "Tricycle to Home",
           "amount": 30
         }
@@ -72,7 +72,7 @@
       "year": 2024,
       "month": 1,
       "date": 2,
-      "day": "Monday",
+      "day": "Tuesday",
       "event": "school",
       "allowance": 500,
       "budget": 1000,

@@ -1,4 +1,4 @@
-import { createCell, formattedCurrency, formattedDate } from "./methods.js";
+import { createCell, formattedCurrency, formattedDate, createButtonCell } from "./methods.js";
 
 //table row for each category
 export function createCategoryElements(category) {
@@ -29,6 +29,7 @@ export function createTotalExpenseRow(entry) {
     createCell(row, entry.day, 'text-left ');
     createCell(row, entry.event, 'text-left ');
     createCell(row, formattedCurrency(entry.totalExpenses), 'text-left ');
+    createButtonCell(row, "view", "additional-classes");
     return row;
 }
 

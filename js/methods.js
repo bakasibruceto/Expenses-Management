@@ -24,7 +24,7 @@ export function createButtonCell(row, textContent, className) {
     let cell = document.createElement('td');
     let button = document.createElement('button');
     button.textContent = textContent;
-    button.className = 'px-4  bg-blue-500 text-white rounded ' + className;
+    button.className = `inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700 ${className}`;
     cell.appendChild(button);
     row.appendChild(cell);
 }
